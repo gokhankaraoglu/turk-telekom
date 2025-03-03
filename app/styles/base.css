@@ -1,0 +1,79 @@
+@import "tailwindcss/base";
+
+@layer base {
+  html {
+    background: #fff;
+    /* font-size: 62.5%; */
+  }
+
+  .custom-min-height {
+    min-height: calc(100dvh - 23px);
+  }
+
+  :root {
+    --base-color-primary: #fff;
+    --base-input-background-color: #f5f5f5;
+    --base-input-height: 64px;
+    --base-input-border-radius: 12px;
+    --base-input-border-color: #b1b1b1;
+    --base-input-border-focus-color: #259ead;
+    --base-placeholder-color: rgb(75 85 99);
+    --base-placeholder-font-minimized-size: 12px;
+    --base-placeholder-font-weight: 300;
+    --base-font-color: #0f1828;
+    --base-font-weight: 400;
+    --base-button-border-radius: 12px;
+    --base-button-background-color: #259ead;
+    --base-button-background-color-hover: #2bb8c9;
+    --saturated-background-color-hover: #d9f0f3;
+    --saturated-border-color-hover: #259ead;
+    --saturated-border-color: var(--base-button-background-color);
+    --saturated-background-color: var(--base-color-primary);
+    --saturated-color: var(--base-button-background-color);
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --base-input-height: 62px;
+      --base-input-focus-height: 19px;
+      --base-input-focus-top: 31px;
+      --base-input-label-top: 22px;
+      --base-input-focus-label-top: 14px;
+      --base-select-height: 62px;
+      --base-select-icon-top: 26.5px;
+      --base-select-label-top: 21px;
+      --base-button-height: 55px;
+    }
+  }
+}
+.skeleton {
+  background: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+.title-placeholder {
+  height: 24px;
+  width: 100px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animation-slideDown {
+  animation-name: slideDown;
+  animation-duration: 0.3s;
+}
+@keyframes slideDown {
+  from {
+    bottom: -400px;
+  }
+  to {
+    bottom: 0;
+  }
+}

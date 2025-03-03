@@ -1,0 +1,99 @@
+@import "tailwindcss/components";
+
+@layer components {
+  .input-wrapper {
+    position: relative;
+  }
+
+  .input-area {
+    height: var(--base-input-height);
+    background-color: var(--base-input-background-color);
+    border-radius: var(--base-input-border-radius);
+    border: 1px solid var(--base-input-border-color);
+    transition: all 0.2s;
+    font-size: 14px;
+    padding: 0 17px 0 17px;
+    font-weight: var(--base-font-weigh);
+    width: 100%;
+    max-width: 450px;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus::placeholder {
+      color: var(--base-placeholder-color);
+    }
+
+    &:focus {
+      border: 1px solid var(--base-input-border-focus-color);
+      background-color: #fff;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .error-message {
+    color: rgb(243, 62, 119);
+    font-size: 12px;
+    margin-top: 1px;
+  }
+
+  .input-area.invalid {
+    border: 1px solid rgb(243, 62, 119);
+  }
+
+  .input-label {
+    position: absolute;
+    top: 30%;
+    left: 17px;
+    font-weight: var(--base-placeholder-font-weight);
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  .input-area:focus + .input-label {
+    top: 5px;
+    font-size: 12px;
+  }
+
+  .invalid {
+    border: 1px solid rgb(243, 62, 119);
+  }
+  .valid {
+    border: 1px solid rgb(42, 197, 44);
+    background-color: #fff;
+  }
+
+  .input-area:valid + .input-label {
+    top: 5px;
+    font-size: 12px;
+  }
+}
+
+input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.input-placeholder {
+  height: var(--base-input-height);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+}
