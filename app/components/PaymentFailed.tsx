@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import CustomButton from "../components/elements/CustomButton";
-import Header from "./Header";
 
 interface PaymentFailedProps {
   redirectUrl: string;
@@ -14,7 +13,6 @@ function PaymentFailed({ redirectUrl }: PaymentFailedProps) {
 
   return (
     <div className="flex flex-col justify-between items-center custom-min-height">
-      <Header />
       <div className="flex flex-col justify-center items-center mt-20 text-center">
         <h2 className="text-2xl font-semibold mb-10">
           İşleminiz Başarısız Oldu
