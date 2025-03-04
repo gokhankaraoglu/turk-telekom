@@ -11,6 +11,7 @@ import CustomButton from "./elements/CustomButton";
 import { getToken } from "../hooks/useToken";
 import { ProductApiResponse } from "../types/product";
 import Footer from "./Footer";
+import Header from "./Header";
 
 const productIcons: Record<number, JSX.Element> = {
   49: <FaMobile />,
@@ -71,6 +72,7 @@ function ProductList() {
 
   return (
     <div className="pt-16 flex flex-col justify-between custom-min-height">
+      <Header />
       <div className="flex flex-col items-center">
         {products.map((product) => (
           <CustomButton

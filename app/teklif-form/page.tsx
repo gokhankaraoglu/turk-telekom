@@ -31,6 +31,7 @@ import {
 import { Credentials, IFormElement } from "../types/form";
 import Footer from "../components/Footer";
 import { ACCESS_TOKEN } from "../utils/api/axiosClient";
+import Header from "../components/Header";
 
 function ProductForm() {
   const router = useRouter();
@@ -195,6 +196,7 @@ function ProductForm() {
 
   return (
     <div className="pt-16 flex flex-col justify-between custom-min-height">
+      <Header />
       <div className="flex flex-col items-center">
         <div className="w-full max-w-md px-3">
           <form autoComplete="off" id="form1" onSubmit={handleSendForm}>

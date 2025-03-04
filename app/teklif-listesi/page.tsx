@@ -12,6 +12,7 @@ import Spinner from "../components/elements/Spinner";
 import { fetchOfferData } from "../utils/api/offer";
 import { useRouter } from "next/navigation";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 function OfferList() {
   const router = useRouter();
@@ -64,6 +65,7 @@ function OfferList() {
   return (
     <>
       <div className="pt-16 flex flex-col justify-between custom-min-height">
+        <Header />
         <div className="flex flex-col items-center">
           <Link href="/" className="mb-11 inline-block self-start">
             <span className="flex items-center">

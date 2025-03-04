@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { StoredPoliceItem } from "../types/product";
 import Spinner from "../components/elements/Spinner";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 function SelectedOffer() {
   const router = useRouter();
@@ -31,6 +32,7 @@ function SelectedOffer() {
   return (
     <>
       <div className="pt-16 flex flex-col justify-between custom-min-height">
+        <Header />
         <div className="flex flex-col items-center">
           <Link
             href="/teklif-listesi"

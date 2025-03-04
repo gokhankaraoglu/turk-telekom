@@ -5,6 +5,7 @@ import CustomButton from "../components/elements/CustomButton";
 import { useEffect, useState } from "react";
 import PdfViewer from "./PdfViewer";
 import { notifyAppLoadSuccess } from "../utils";
+import Header from "./Header";
 
 interface PaymentSuccessPayload {
   policeNo: string;
@@ -40,6 +41,7 @@ function PaymentSuccess({
   return (
     <>
       <div className="flex flex-col justify-between items-center custom-min-height">
+        <Header />
         <div className="flex flex-col justify-center items-center mt-20 text-center">
           <h2 className="text-2xl font-semibold mb-10">
             İşleminiz gerçekleşti
